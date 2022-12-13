@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*Creates multiple div classes to style the website, and display information in the <p> tags*@
+<div class="text-center">
+    <h1 class="display-4">Welcome to Keen's Wholesale.</h1>
+    <div class="shadow-sm p-3 mb-5 bg-white rounded">
+        <br>
+        <h5>Your entrepreneurial instincts have led you to the right place.</h5>
+        <br>
+        <p>Here at KW, you can easily add, modify, and sell your products to businesses and customers around the world.</p>
+        <p>Learn more about our mission!</p>
+        <a class="list-group-item list-group-item-action" asp-area="" asp-controller="Products" asp-action="Create">Sell your items today!</a>
+    </div>
+</div>

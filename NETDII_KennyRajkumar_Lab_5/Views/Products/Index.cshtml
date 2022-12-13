@@ -1,0 +1,77 @@
+﻿@model IEnumerable<NETDII_KennyRajkumar_Lab_5.Models.Product>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="title">Product Inventory</h1>
+
+<p >
+    <a class="box-shadow"  asp-action="Create">Create New Product</a>
+</p>
+<hr />
+@*Divs to style the page*@
+<div class="shadow-sm p-3 mb-5 bg-white rounded">
+    <div class="row">
+        <div class="col-2">
+            @*For each loop to cycle through the products and display them neatly*@
+            @foreach (var item in Model)
+            {
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="@("~/image/"+ item.productImage)" asp-append-version="true" />
+                    </div>
+                    <div class="product-info">
+                        <h5>@Html.DisplayFor(modelItem => item.productName)</h5>
+                        <h6>$@Html.DisplayFor(modelItem => item.productPrice)</h6>
+                    </div>
+                    <a asp-action="Details" asp-route-id="@item.productID" class="box-shadow">Product Details</a>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+
+@*<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.productImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productDesc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.productPrice)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.productImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productDesc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productPrice)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.productID">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.productID">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.productID">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@

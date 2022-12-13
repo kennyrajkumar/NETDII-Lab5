@@ -1,0 +1,28 @@
+﻿@model NETDII_KennyRajkumar_Lab_5.Models.Product
+
+<h4>Search Products</h4>
+<hr />
+@*Basic for to allow user to input the name of the product they are searching for*@
+<div class="row">
+    <div class="shadow-sm p-3 mb-5 bg-white rounded">
+        <form asp-action="ShowSearchResult">
+            <div class="form-group">
+                <label name="SearchProduct" class="control-label">Product Name:</label>
+                <input name="SearchProduct" class="form-control" />
+                
+            </div>
+            
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="list-group-item list-group-item-action" style="width:35%" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

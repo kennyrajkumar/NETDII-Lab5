@@ -1,0 +1,48 @@
+﻿@model NETDII_KennyRajkumar_Lab_5.Models.Product
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create Product</h1>
+
+<hr />
+@*Divs to help style our form, then form to allow users to fill out information about the product*@
+<div class="row">
+    <div class="shadow-sm p-3 mb-5 bg-white rounded">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ImageFile" class="control-label"></label>
+                <input asp-for="ImageFile" accept="image/*" />
+                <span asp-validation-for="ImageFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="productName" class="control-label"></label>
+                <input asp-for="productName" class="form-control" />
+                <span asp-validation-for="productName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="productDesc" class="control-label"></label>
+                <input asp-for="productDesc" class="form-control" />
+                <span asp-validation-for="productDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="productPrice" class="control-label"></label>
+                <input asp-for="productPrice" class="form-control" />
+                <span asp-validation-for="productPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a class="list-group-item list-group-item-action" style="width:35%" asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

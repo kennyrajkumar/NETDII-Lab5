@@ -1,0 +1,142 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+/*Flex box attempt*/
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+
+    justify-content: space-between;
+}
+.flex-container > section {
+    flex: 1 1 0; /* Prevent the extra space around content */
+    text-align: center; /* Align text on center */
+    display: flex; /* Display as flex */
+    /*flex-direction: column;*/ /* Display flex in column */
+    align-items: center; /* Align items on center */
+    max-width: 450px; /* Set max-width so the last items will behave in a more traditional way */
+    
+}
+
+.flex-container div {
+    
+    padding: 10px;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.product-image img {
+    max-width: 100%;
+}
+
+
+
+.product-info {
+    margin-top: auto;
+    color: black;
+}
+
+.product-card {
+    flex: 1 20%;
+    text-align: center;
+    margin-top: auto;
+    padding: 2%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    flex-basis: 16%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffb8de;
+}
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+h1.title {
+    text-align:center;
+}
+a.box-shadow {
+    background-color: #FFDDE1;
+    padding: 1.5%;
+    border-radius: 25px;
+}
+a.box-shadow:hover {
+    background-color: #FFDDE1;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* Provide sufficient contrast against white background */
+a {
+  color: white;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background-color: #ddd;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
